@@ -1,0 +1,86 @@
+{% extends "@App/Base/base.html.twig" %}
+
+
+{% block title %} Accueil {% endblock %}
+
+
+
+{% block header%}
+
+    <header>
+
+        <div class="container-fluid justify-content-center">
+            <div class="row justify-content-around align-items-center  sticky">
+                <div class="col-1">
+                    <img src="{{ asset('img/7236b6d3f921.png') }}" alt="" class="img-fluid">
+                </div>
+                <div class=" col-2 offset-1 nav text-center">
+
+                    <h1 class="nav1"><a href="{{ path('accueil_users') }}" class="accueilNav">Accueil </a></h1>
+                </div>
+
+                <div class="col-2 nav text-center"><h1 class="nav2 "><a href="{{ path('users_ambulances') }}">Ambulances</a></h1>
+                </div>
+                <div class="col-2 nav"><h1 class="nav3 "><a href="#">Vsl & taxis</a></h1>
+                </div>
+                <div class="col-2 nav"><h1 class="nav4 "><a href="#">Sites</a></h1>
+                </div>
+                <div class="col-2 nav"><h1 class="nav5 "><a href="#">Contact</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid  fond  ">
+            <div class="container d-flex justify-content-center align-items-center text-center opacity ">
+                <div class="row">
+                    <h1>Les Ambulances Groupe 33 vous accueillent à Grezillac, Vayres et Saint Magne de Castillon</h1>
+                </div>
+            </div>
+
+        </div>
+        <div class="container d-flex align-items-center j">
+            <div class="col-6">
+                <div class="col-12">
+                    <h1 class="about">Ambulances Groupe 33 SARL,
+                        à votre service en Gironde (33) !</h1>
+                </div>
+                <div class="col-12">
+                    <p>La SARL Ambulances Groupe 33 est implantée en Gironde (33), sur plusieurs sites : Branne, Vayres, Saint-Magne-de-Castillon et Grézillac. Les véhicules se déplacent dans toute la France et en Europe pour le transport de personnes.
+
+                        L'équipe de la société Ambulances Groupe 33 reste à votre service pour le transport en ambulance, en taxi ou en VSL, pour des trajets toutes distances.
+                        Le dévouement de l'équipe et sa gentillesse font partie de nos atouts.
+
+                        Nous possédons des ambulances pour le transport de patients assis et couchés pour des trajets vers les hôpitaux, les maisons de retraite et pour les rendez-vous médicaux.
+
+                        Notre flotte de taxis vous transporte où vous le souhaitez, partout en France entière et en Europe.
+
+                        Nos véhicules sont neufs et régulièrement révisés : la sécurité et le confort de nos passagers sont nos priorités.
+
+                        Pour de plus amples informations, contactez la SARL Ambulances Groupe 33 en Gironde !.</p>
+                </div>
+
+            </div>
+            <div class="col-6">
+
+                <img src="{{ asset('img/ambulance_2.png') }}" alt="" class="img-fluid">
+
+
+            </div>
+
+
+        </div>
+    </header>
+    <article>
+        <div class="container-fluid milieu">
+            <div class="container opacity">
+
+            </div>
+
+        </div>
+    </article>
+    <article>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91943.28302174697!2d-0.2635779981048061!3d44.86588168117564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd554572af414f23%3A0xdb0be865e8a99b66!2sSarl+Ambulances+Groupe+33!5e1!3m2!1sfr!2sfr!4v1543774676505" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </article>
+
+
+{% endblock %}

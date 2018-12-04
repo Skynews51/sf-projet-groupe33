@@ -1,0 +1,54 @@
+{% extends "@App/Base/base.html.twig" %}
+
+
+
+
+
+{% block content %}
+
+    <div class="container-fluid ">
+        <div class="utilisateur">
+            <div class="offset-10 col-2">
+                {% if app.user %}
+                    <h4 class="nomUtil">{{ app.user.username }}</h4>
+                {% endif %}
+                <p><a href="{{ path('fos_user_security_login') }}" class="deco">Deconnexion</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid  fondEmp">
+        <div class="container text-center menu ">
+
+            <div class="row ">
+                <div class="navEmp col-12 d-flex">
+                    <div class="col-3 ">
+
+                        <h4><a href="{{ path('accueil_emp') }}" class="aEmpAccueil">Accueil </a></h4>
+                    </div>
+
+                    <div class="col-3 ">
+                        <h4><a href="#" class="aEmpDoc">Mes documents</a></h4>
+                    </div>
+                    <div class="col-3 ">
+                        <h4><a href="#">Notes d'information</a></h4>
+                    </div>
+                    <div class="col-3 ">
+                        <h4><a href="{{ path('profil_emp') }}" class="">Mon profil</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-12 justify-content-center mt-5 ">
+                <div class="">
+                    <h2>Bienvenue dans votre espace personnel !</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

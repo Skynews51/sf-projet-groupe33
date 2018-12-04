@@ -1,0 +1,155 @@
+body{
+  margin: 0 auto;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+.fond{
+  background-image: url("../img/auto.jpg");
+  background-size: cover;
+  height: 100vh;
+  margin-top: 80px;
+}
+.opacity{
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+h1{
+  color: white;
+}
+.about{
+  color: gray;
+}
+.milieu{
+  background-image: url('../img/ambulance-2901017_1920.jpg');
+  background-size: cover;
+  height: 50vh;
+  background-attachment: fixed;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  z-index: 90;
+  background-color: white;
+}
+/*--------css partie navigation accueil------------*/
+
+.accueilNav{
+  color: blueviolet;
+}
+.nav1, .nav2, .nav3, .nav4, .nav5{
+  font-family: 'Dancing Script', cursive;
+
+}
+.carouselHeader{
+  height: 300px;
+}
+a{
+  color: black;
+}
+a:hover{
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: blueviolet;
+}
+.nav{
+
+  height: 35px;
+}
+.nav1{
+  margin-left: 60px;
+  color: blueviolet;
+}
+
+
+
+/*------------css partie navigation ambulances--------------*/
+
+.ambuNav{
+  color: blueviolet;
+}
+.nav1Ambu, .nav2Ambu, .nav3Ambu, .nav4Ambu, .nav5Ambu{
+  font-family: 'Dancing Script', cursive;
+
+}
+.carouselHeader{
+  height: 300px;
+}
+a{
+  color: black;
+}
+a:hover{
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: blueviolet;
+}
+.nav{
+
+  height: 35px;
+}
+.nav1Ambu{
+  margin-left: 60px;
+}
+.nav2Ambu{
+
+  color: blueviolet;
+}
+/*----------------css partie utilisateur-------------------------------------------------------------------------------*/
+.utilisateur{
+  position: absolute;
+  width: 90%;
+  top: 0;
+  z-index: 90;
+}
+.deco{
+  color: white;
+}
+.nomUtil{
+  color: white;
+}
+
+/*----------------css partie Employés accueil---------------------------------------------------------------------------*/
+
+.fondEmp{
+  background-image: url("../img/auto.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding-top: 100px;
+
+}
+
+.menu{
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 1500px;
+  height: 600px;
+}
+.navEmp{
+
+  background-color: cornflowerblue;
+}
+.aEmpAccueil{
+  color: blueviolet;
+}
+
+/*--------essai------------css partie employé profil-----------------------------------------------------------------*/
+
+.menu{
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 1500px;
+  height: 600px;
+}
+.navEmp{
+
+  background-color: cornflowerblue;
+}
+.aEmpProfil{
+  color: blueviolet;
+}

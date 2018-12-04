@@ -1,0 +1,66 @@
+{% extends "@App/Base/base.html.twig" %}
+
+
+
+
+
+{% block content %}
+
+
+    <div class="container-fluid ">
+        <div class="utilisateur">
+            <div class="offset-10 col-2">
+                {% if app.user %}
+                    <h4 class="nomUtil">{{ app.user.username }}</h4>
+                {% endif %}
+                <p><a href="#" class="deco">Deconnexion</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid  fondEmp">
+        <div class="container text-center menu ">
+
+            <div class="row ">
+                <div class="navEmp col-12 d-flex">
+                    <div class="col-3 ">
+
+                        <h4><a href="{{ path('accueil_emp') }}" class="">Accueil </a></h4>
+                    </div>
+
+                    <div class="col-3 ">
+                        <h4><a href="#" class="">Mes documents</a></h4>
+                    </div>
+                    <div class="col-3 ">
+                        <h4><a href="#">Notes d'information</a></h4>
+                    </div>
+                    <div class="col-3 ">
+                        <h4><a href="{{ path('profil_emp') }}" class="aEmpProfil">Mon profil</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-12 align-items-end mt-5 ">
+                <div class="">
+
+                    {% for employes in employes %}
+                        <h5>{{ employes.nom }}</h5>
+                        <h5>{{ employes.prenom }}</h5>
+                        <h5>{{ employes.dateNaissance | date('d/m/Y')}}</h5>
+                        <h5>{{ employes.adresse }}</h5>
+                        <h5>{{ employes.dateEmbauche | date('d/m/Y')}}</h5>
+                        <h5>{{ employes.site }}</h5>
+
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}
