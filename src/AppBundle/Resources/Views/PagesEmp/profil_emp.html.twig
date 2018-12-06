@@ -13,7 +13,7 @@
                 {% if app.user %}
                     <h4 class="nomUtil">{{ app.user.username }}</h4>
                 {% endif %}
-                <p><a href="#" class="deco">Deconnexion</a></p>
+                <p><a href="{{ path('fos_user_security_login') }}" class="deco">Deconnexion</a></p>
             </div>
         </div>
     </div>
@@ -35,23 +35,22 @@
                         <h4><a href="#">Notes d'information</a></h4>
                     </div>
                     <div class="col-3 ">
-                        <h4><a href="{{ path('profil_emp') }}" class="aEmpProfil">Mon profil</a></h4>
+                        <h4><a href="{{ path('emp_profil') }}" class="aEmpProfil">Mon profil</a></h4>
                     </div>
                 </div>
             </div>
             <div class="row col-12 align-items-end mt-5 ">
                 <div class="">
 
-                    {% for employes in employes %}
-                        <h5>{{ employes.nom }}</h5>
-                        <h5>{{ employes.prenom }}</h5>
-                        <h5>{{ employes.dateNaissance | date('d/m/Y')}}</h5>
-                        <h5>{{ employes.adresse }}</h5>
-                        <h5>{{ employes.dateEmbauche | date('d/m/Y')}}</h5>
-                        <h5>{{ employes.site }}</h5>
+                        <h5>{{ app.user.nom }}</h5>
+                    <h5>{{ app.user.prenom }}</h5>
+                    <h5>{{ app.user.dateNaissance | date('Y/m/d') }}</h5>
+                    <h5>{{ app.user.adresse }}</h5>
+                    <h5>{{ app.user.dateEmbauche | date('Y/m/d') }}</h5>
+                    <h5>{{ app.user.site }}</h5>
 
 
-                    {% endfor %}
+
 
                 </div>
             </div>

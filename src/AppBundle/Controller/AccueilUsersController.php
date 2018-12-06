@@ -21,7 +21,7 @@ class AccueilUsersController extends Controller
 
     public function AccueilUsersAction(){
 
-return $this->render('@App/PagesUsers/accueil_users.html.twig');
+        return $this->render('@App/PagesUsers/accueil_users.html.twig');
 
 
 

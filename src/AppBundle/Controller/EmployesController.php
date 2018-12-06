@@ -9,7 +9,6 @@
 namespace AppBundle\Controller;
 
 
-use AppBundle\Entity\Employes;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -25,43 +24,20 @@ class EmployesController extends Controller
 
     }
     /**
-     * @Route("/emp/profil", name="profil_emp")
+     * @Route("/profil", name="emp_profil")
      */
     public function ProfilEmpAction(){
 
-        $repository = $this->getDoctrine()->getRepository(Employes::class);
+        $user = $this->get('security.token_storage')->getToken()->getUser();
 
-        $employes = $repository->findAll();
-//retourne la page html auteurs en utilisant le twig
 
         return $this->render('@App/PagesEmp/profil_emp.html.twig',
 
             [
-                'employes'=> $employes
+                'user'=> $user
             ]
 
         );
     }
 }
 
-///**
- //* @Route("/auteur/{id}", name="auteur_info")
-// */
-//public function InfoAuteurAction($id)
-//{
-    //on a besoin du repository Auteur pour récupérer le contenu de la table Auteur
-    // pour récupérer ce repository :
-    // on appelle Doctrine (qui gère les répository)
-    // pour appeler la méthode getRepository qui récupère le repository Auteur (avec Auteur::class passé en parametre)
-    //le placeholder {id} est utilisé comme paramétre $id pour la requete doctrine
-    //$repository = $this->getDoctrine()->getRepository(Auteur::class);
-    // choix de l'auteur avec la méthode find()
-    //$auteur = $repository->find($id);
-
-    //return $this->render('@App/Pages/info.html.twig',
-     //   [
-           // 'auteur'=>$auteur
-      //  ]
-   // );
-
-//}
