@@ -14,11 +14,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AmbulancesUsersController extends Controller
 {
-/**
- * @Route("/ambulances", name="users_ambulances")
- */
-public function AmbulancesUsersAction(){
+    /**
+     * @Route("/ambulances", name="users_ambulances")
+     */
+    public function AmbulancesUsersAction(){
 
-    return $this->render('@App/PagesUsers/ambulances_users.html.twig');
-}
+        return $this->render('@App/PagesUsers/ambulances_users.html.twig');
+    }
 }

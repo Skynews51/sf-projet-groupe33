@@ -44,9 +44,11 @@
 
                         <h5>{{ app.user.nom }}</h5>
                     <h5>{{ app.user.prenom }}</h5>
-                    <h5>{{ app.user.dateNaissance | date('Y/m/d') }}</h5>
+                    <h5>{{ app.user.dateNaissance | date('d/m/Y') }}</h5>
+                    <h5>{{ app.user.email }}</h5>
+
                     <h5>{{ app.user.adresse }}</h5>
-                    <h5>{{ app.user.dateEmbauche | date('Y/m/d') }}</h5>
+                    <h5>{{ app.user.dateEmbauche | date('d/m/Y') }}</h5>
                     <h5>{{ app.user.site }}</h5>
 
 

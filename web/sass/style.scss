@@ -5,8 +5,7 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 .fond{
-  background-image: url("../img/auto.jpg");
-  background-size: cover;
+
   height: 100vh;
   margin-top: 80px;
 }
@@ -15,17 +14,14 @@ body{
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
-h1{
-  color: white;
-}
+
 .about{
   color: gray;
 }
 .milieu{
-  background-image: url('../img/ambulance-2901017_1920.jpg');
-  background-size: cover;
+
   height: 50vh;
-  background-attachment: fixed;
+
 }
 
 .sticky {
@@ -36,6 +32,16 @@ h1{
   z-index: 90;
   background-color: white;
 }
+#titre{
+  padding-top: 220px;
+}
+
+#slogan{
+  font-family: 'Dancing Script', cursive;
+  margin-top: 30px;
+  color: #0088CC;
+  font-size: 3em;
+}
 /*--------css partie navigation accueil------------*/
 
 .accueilNav{
@@ -45,9 +51,7 @@ h1{
   font-family: 'Dancing Script', cursive;
 
 }
-.carouselHeader{
-  height: 300px;
-}
+
 a{
   color: black;
 }
@@ -58,15 +62,62 @@ a:hover{
 }
 .nav{
 
-  height: 35px;
+  /* height: 35px;*/
 }
 .nav1{
   margin-left: 60px;
   color: blueviolet;
 }
+.box{
+}
+.imgMilieu{
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.imgMilieu:hover{
+  -webkit-transform: scale(1.3);
+  transform: scale(1.1);
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+}
+.coulTitre{
+  background-color: blueviolet;
+  height: 40px;
+}
+.titreBox1{
+  width: 100%;
+  position: absolute;
+  margin-left: 80px;
+}
+.titreBox2{
+  position: absolute;
+  margin-left: 90px;
+}
+.titreBox3{
+  position: absolute;
+  margin-left: 70px;
+}
+.box{
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.box:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.resa{
+  position: absolute;
+  text-align: center;
+  margin-top: 220px;
+  margin-left: 25px;
 
-
-
+}
 /*------------css partie navigation ambulances--------------*/
 
 .ambuNav{
@@ -98,6 +149,13 @@ a:hover{
 
   color: blueviolet;
 }
+.articleAmbu{
+  margin-top: 600px;
+}
+#articleAmbu{
+  color: #0088CC;
+  font-weight: bold;
+}
 /*----------------css partie utilisateur-------------------------------------------------------------------------------*/
 .utilisateur{
   position: absolute;
@@ -115,7 +173,7 @@ a:hover{
 /*----------------css partie Employés accueil---------------------------------------------------------------------------*/
 
 .fondEmp{
-  background-image: url("../img/auto.jpg");
+  background-image: url("../img/ambu_toyota.jpg");
   background-size: cover;
   height: 100vh;
   padding-top: 100px;
@@ -152,4 +210,76 @@ a:hover{
 }
 .aEmpProfil{
   color: blueviolet;
+}
+
+/*----------essai--------------formulaireTéléchargé------------------------------------------------------------------*/
+
+
+.msg-erreur{
+  color: red;
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.button {
+  text-transform: uppercase;
+  outline: 0;
+  background: blue;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+@media screen and (max-width: 576px) {
+  .login-page{
+    width: 200px;
+    margin-left: 30px;
+  }
+  .menu{
+    width: 380px;
+    height: 300px;
+    text-align: center;
+  }
+
+
 }

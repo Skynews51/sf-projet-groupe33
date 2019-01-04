@@ -6,11 +6,11 @@
 
 {% block content %}
 
-    <div class="container-fluid ">
+    <div class="container-fluid d-none d-md-block">
         <div class="utilisateur">
-            <div class="offset-10 col-2">
+            <div class="col-2">
                 {% if app.user %}
-                    <h4 class="nomUtil">{{ app.user.username }}</h4>
+                    <a href="{{ path('emp_profil') }}" class=""> <h4 class="nomUtil">{{ app.user.username }}</h4></a>
                 {% endif %}
                 <p><a href="{{ path('fos_user_security_login') }}" class="deco">Deconnexion</a></p>
             </div>
@@ -21,21 +21,31 @@
         <div class="container text-center menu ">
 
             <div class="row ">
-                <div class="navEmp col-12 d-flex">
-                    <div class="col-3 ">
-
+                <div class="navEmp col-12  d-flex">
+                    <div class="col-3  d-md-none">
+                        <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
+                    </div>
+                    <div class="utilisateur">
+                        <div class="col-2 offset-8 d-md-none">
+                            {% if app.user %}
+                                <a href="{{ path('emp_profil') }}" class=""> <h4 class="nomUtil">{{ app.user.username }}</h4></a>
+                            {% endif %}
+                            <p><a href="{{ path('fos_user_security_login') }}" class="deco">Deconnexion</a></p>
+                        </div>
+                    </div>
+                    <div class="col-3 d-none d-md-block">
                         <h4><a href="{{ path('accueil_emp') }}" class="aEmpAccueil">Accueil </a></h4>
                     </div>
 
-                    <div class="col-3 ">
+                    <div class="col-3 d-none d-md-block">
                         <h4><a href="#" class="aEmpDoc">Mes documents</a></h4>
                     </div>
-                    <div class="col-3 ">
+                    <div class="col-3 d-none d-md-block">
                         <h4><a href="#">Notes d'information</a></h4>
                     </div>
 
 
-                        <div class="col-3 ">
+                        <div class="col-3 d-none d-md-block">
 
                             <h4><a href="{{ path('emp_profil') }}" class="">Mon profil</a></h4>
                         </div>
@@ -44,7 +54,7 @@
             </div>
             <div class="row col-12 justify-content-center mt-5 ">
                 <div class="">
-                    <h2>Bienvenue dans votre espace personnel !</h2>
+                    <h3>Bienvenue dans votre espace personnel {{ app.user.prenom }}!</h3>
                 </div>
             </div>
         </div>
