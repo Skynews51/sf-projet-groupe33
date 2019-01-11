@@ -18,7 +18,9 @@ class ContactUsersController extends Controller
      * @Route("/contact", name="users_contact")
      */
     public function ContactUsersAction(){
-        return $this->render('AppBundle:PagesUsers:contact_users.html.twig');
+        return $this->render('@App/PagesUsers/contact_users.html.twig');
 
     }
+
+
 }

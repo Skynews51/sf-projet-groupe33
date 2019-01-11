@@ -26,9 +26,11 @@
             </div>
             <div class="scroll col-md-8 ">
                 <div>
-                    {{ form_start(form) }}
-                    {{ form_label(form.nom, 'Nom', {'label_attr':{'class':'label' }}) }}
-                    {{ form_errors(form.nom) }}
+                    <div>
+                        {{ form_start(form) }}
+                        {{ form_label(form.nom, 'Nom', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.nom) }}
+                    </div>
                     <div>
                         {{ form_widget(form.nom,{'attr' : {'class': 'form-control'}}) }}
                     </div>
@@ -53,15 +55,19 @@
                     <div>
                         {{ form_widget(form.username, {'attr' : {'class': 'form-control'}}) }}
                     </div>
-                    {{ form_label(form.email, 'Email', {'label_attr':{'class':'label' }}) }}
-                    {{ form_errors(form.email) }}
+                    <div>
+                        {{ form_label(form.email, 'Email', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.email) }}
+                    </div>
                     <div>
                         {{ form_widget(form.email,{'attr' : {'class': 'form-control'}}) }}
                     </div>
 
                     <hr>
-                    {{ form_label(form.plainPassword, 'Mot de passe salarié', {'label_attr':{'class':'label' }}) }}
-                    {{ form_errors(form.plainPassword) }}
+                    <div>
+                        {{ form_label(form.plainPassword, 'Mot de passe salarié', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.plainPassword) }}
+                    </div>
                     <div>
                         {{ form_widget(form.plainPassword,{'first_option' : {'class': 'form-control'}}) }}
                     </div>
@@ -73,8 +79,10 @@
                         {{ form_widget(form.dateEmbauche, {'attr' : {'class': 'form-control'}}) }}
                     </div>
                     <hr>
-                    {{ form_label(form.adresse, 'Adresse', {'label_attr':{'class':'label' }}) }}
-                    {{ form_errors(form.adresse) }}
+                    <div>
+                        {{ form_label(form.adresse, 'Adresse', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.adresse) }}
+                    </div>
                     <div>
                         {{form_widget(form.adresse,{'attr' : {'class': 'form-control'}}) }}
                     </div>
@@ -92,6 +100,7 @@
             </div>
         </div>
     </div>
+
 
 
 
