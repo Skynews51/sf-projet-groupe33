@@ -1,6 +1,8 @@
 $(function(){
-    $('.logo').click(function(){
-        $('.articleMilieu').slideToggle("slow");
+    $('.hamb').click(function(){
+        $('.menuSlide').slideToggle("slow");
 
     });
 });
+
+

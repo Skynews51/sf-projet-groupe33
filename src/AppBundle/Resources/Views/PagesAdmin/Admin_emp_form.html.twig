@@ -1,0 +1,101 @@
+{% extends "@App/BaseAdmin/base.html.twig" %}
+
+{% block content %}
+
+    <div class="container-fluid  fondEmp">
+        <div class="container  menuEmp ">
+            <div class="row text-center">
+                <div class="col-md-12 d-lg-flex navEmp">
+
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#" class="">Profil employé</a>
+                        </h4>
+                    </div>
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#">Liste d'information</a>
+                        </h4>
+                    </div>
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#" class="aEmpDoc">Liste documents</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll col-md-8 ">
+                <div>
+                    {{ form_start(form) }}
+                    {{ form_label(form.nom, 'Nom', {'label_attr':{'class':'label' }}) }}
+                    {{ form_errors(form.nom) }}
+                    <div>
+                        {{ form_widget(form.nom,{'attr' : {'class': 'form-control'}}) }}
+                    </div>
+                    <div>
+                        {{ form_label(form.prenom, 'Prenom', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.prenom) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.prenom, {'attr' : {'class': 'form-control'}}) }}
+                    </div>
+                    <div>
+                        {{ form_label(form.dateNaissance, 'Date de naissance', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.dateNaissance) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.dateNaissance, {'attr' : {'class': 'form-control'}}) }}
+                    </div>
+                    <div>
+                        {{ form_label(form.username, 'Pseudo', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.username) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.username, {'attr' : {'class': 'form-control'}}) }}
+                    </div>
+                    {{ form_label(form.email, 'Email', {'label_attr':{'class':'label' }}) }}
+                    {{ form_errors(form.email) }}
+                    <div>
+                        {{ form_widget(form.email,{'attr' : {'class': 'form-control'}}) }}
+                    </div>
+
+                    <hr>
+                    {{ form_label(form.plainPassword, 'Mot de passe salarié', {'label_attr':{'class':'label' }}) }}
+                    {{ form_errors(form.plainPassword) }}
+                    <div>
+                        {{ form_widget(form.plainPassword,{'first_option' : {'class': 'form-control'}}) }}
+                    </div>
+                    <div>
+                        {{ form_label(form.dateEmbauche, 'Date embauche', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.dateEmbauche) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.dateEmbauche, {'attr' : {'class': 'form-control'}}) }}
+                    </div>
+                    <hr>
+                    {{ form_label(form.adresse, 'Adresse', {'label_attr':{'class':'label' }}) }}
+                    {{ form_errors(form.adresse) }}
+                    <div>
+                        {{form_widget(form.adresse,{'attr' : {'class': 'form-control'}}) }}
+                    </div>
+                    <div>
+                        {{ form_label(form.site, 'Site', {'label_attr':{'class':'label' }}) }}
+                        {{ form_errors(form.site) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.site, {'attr' : {'class': 'form-control'}}) }}
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+                <a href="{{ path('admin_employes') }}">Retour à la liste des employés</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

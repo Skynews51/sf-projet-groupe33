@@ -1,0 +1,59 @@
+{% extends "@App/BaseAdmin/base.html.twig" %}
+
+{% block content %}
+
+    <div class="container-fluid  fondEmp">
+        <div class="container  menuEmp ">
+            <div class="row text-center">
+                <div class="col-md-12 d-lg-flex navEmp">
+
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#" class="">Profil employé</a>
+                        </h4>
+                    </div>
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#">Liste d'information</a>
+                        </h4>
+                    </div>
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#" class="aEmpDoc">Liste documents</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-12 scroll  mt-5">
+                <div class="col-md-12">
+                    <h3>Vous êtes sur la page administrateur</h3>
+                    <a href="{{ path('admin_form_employes') }}">
+                        <button type="button" class="btn btn-outline-info">Ajouter un employé</button>
+                    </a>
+                </div>
+                {% for user in users %}
+                    <div class="col-md-2">
+                        <p>Nom : {{ user.nom }}</p>
+                        <p>Prénom : {{ user.prenom }}</p>
+                        <p>Pseudo : {{ user.username }}</p>
+                        <a href="{{ path('admin_employe_supprimer', {'id': user.id }) }}"><button type="button" class="btn btn-danger">SUPPRIMEZ</button>
+                        </a>
+
+                        {#<p>Date de naissance : {{ user.dateNaissance| date('m/d/Y') }}</p>
+                        <p>Date d'embauche : {{ user.dateEmbauche| date('m/d/Y')}}</p>
+                        <p>Lieu de travail : {{ user.site }}</p>#}
+
+
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

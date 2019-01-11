@@ -9,39 +9,41 @@
 
     <header>
 
-        <div class="container-fluid justify-content-center text-center">
+        <div class="container-fluid ">
 
-            <div class="row justify-content-around align-items-center text-center sticky">
-                <div class="col-2 col-md-1 col-lg-1">
+            <div class="row d-lg-flex align-items-center sticky">
+                <div class="col-2  col-md-1 col-lg-1">
                     <img src="{{ asset('img/7236b6d3f921.png') }}" alt="croix de vie" class="img-fluid">
                 </div>
-                <div class="col-2 offset-5 d-lg-none">
+                <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
                     <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
                 </div>
-                <div class=" col-2 offset-1 d-none d-lg-block nav text-center">
-
-                    <h1 class="nav1"><a href="{{ path('accueil_users') }}" class="accueilNav">Accueil </a></h1>
+                <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
+                    <h2 class="nav">
+                        <a href="{{ path('accueil_users') }}" class="nav nav1" id="accueilNav">Accueil </a>
+                    </h2>
                 </div>
 
-                <div class="col-2 d-none d-lg-block nav text-center">
-                    <h1 class="nav2 ">
-                        <a href="{{ path('users_ambulances') }}">Ambulances</a>
-                    </h1>
+                <div class="col-lg-2 d-none d-lg-block">
+                    <h2 class="nav">
+                        <a href="{{ path('users_ambulances') }}"  class="nav" >Ambulances</a>
+                    </h2>
                 </div>
-                <div class="col-2 d-none d-lg-block nav">
-                    <h1 class="nav3 ">
-                        <a href="#">Vsl & taxis</a>
-                    </h1>
+                <div class="col-lg-2 d-none d-lg-block ">
+                    <h2 class="nav">
+                        <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav">Vsl & taxis</a>
+                    </h2>
                 </div>
-                <div class="col-2 d-none d-lg-block nav">
-                    <h1 class="nav4 ">
-                        <a href="#">Sites</a></h1>
-                </div>
-                <div class="col-2 d-none d-lg-block nav"><h1 class="nav5 "><a href="#">Contact</a></h1>
+
+                <div class="col-lg-2 d-none d-lg-block ">
+                    <h2 class=" nav">
+                        <a href="{{ path('users_contact') }}" class="nav">Contact</a>
+                    </h2>
                 </div>
             </div>
 
         </div>
+
     </header>
 {% endblock %}
 
@@ -52,14 +54,14 @@
             {#<div class="parallax-window" data-parallax="scroll" data-image-src="/path/to/image.jpg"></div>#}
 
             <div class="col-12">
-                <h1 id="titre">Les Ambulances Groupe 33 vous accueillent à Grezillac, Vayres et Saint Magne de Castillon</h1>
+                <h3 id="titre"> Les Ambulances Groupe 33, toute notre compétence professionnelle pour votre santé</h3>
             </div>
             <div class="col-12">
                 <p id="slogan"> <strong> Les Ambulances Groupe 33 toujours à vos côtés !</strong></p>
             </div>
         </div>
-
     </div>
+
     <div class="container d-flex align-items-center ">
         <div class="col-12 col-lg-6">
             <div class="col-12">
@@ -71,14 +73,11 @@
 
                     L'équipe de la société Ambulances Groupe 33 reste à votre service pour le transport en ambulance, en taxi ou en VSL, pour des trajets toutes distances.
                     Le dévouement de l'équipe et sa gentillesse font partie de nos atouts.
-
                     Nous possédons des ambulances pour le transport de patients assis et couchés pour des trajets vers les hôpitaux, les maisons de retraite et pour les rendez-vous médicaux.
-
                     Notre flotte de taxis vous transporte où vous le souhaitez, partout en France entière et en Europe.
-
                     Nos véhicules sont neufs et régulièrement révisés : la sécurité et le confort de nos passagers sont nos priorités.
-
-                    Pour de plus amples informations, contactez la SARL Ambulances Groupe 33 en Gironde !.</p>
+                    Pour de plus amples informations, contactez la SARL Ambulances Groupe 33 en Gironde !.
+                </p>
             </div>
 
         </div>
@@ -118,57 +117,66 @@
         </div>
     </article>
     <article>
-        <div class="container-fluid d-lg-flex justify-content-around mt-lg-5">
-            <div class="col-12 col-lg-4 box">
-                <div class="col-lg-12 coulTitre ">
-                    <h3 class="titreBox1">Ambulance Lourde</h3>
+        <div class="container-fluid ">
+            <div class="container d-lg-flex text-center justify-content-center align-items-center mt-3 ">
+                <div class="col-12  col-lg-4 mb-3 box">
+                    <div class="coulFond ">
+                        <p class="titreBox1">Ambulance Lourde</p>
+                    </div>
+                    <div class="resa">
+                        <a href="{{ path('users_contact') }}">
+                            <button type="button" class="btn btn-primary">Je réserve
+                            </button>
+                        </a>
+                    </div>
+                    <img src="{{ asset('img/ambu_atsu.jpg') }}" alt="" class="img-fluid imgResa">
                 </div>
-                <div class="col-lg-10 resa">
-                    <button type="button" class="btn btn-primary">Je réserve</button>
+                <div class="col-12 col-lg-4 mb-3 box">
+                    <div class="coulFond">
+                        <p class="titreBox2">Ambulance Légère</p>
+                    </div>
+                    <div class="resa">
+                        <a href="{{ path('users_contact') }}">
+                            <button type="button" class="btn btn-primary">Je réserve
+                            </button>
+                        </a>
+                    </div>
+                    <img src="{{ asset('img/ambu_legere.jpg') }}" alt="" class="img-fluid imgResa">
                 </div>
-                <img src="{{ asset('img/ambu_atsu.jpg') }}" alt="" class="img-fluid">
-            </div>
-            <div class="col-12 col-lg-4 box">
-                <div class="col-lg-12 coulTitre">
-                    <h3 class="titreBox2">Ambulance Légère</h3>
+                <div class="col-12 col-lg-4 mb-3 box">
+                    <div class="coulFond">
+                        <p class="titreBox3">Véhicule sanitaire léger</p>
+                    </div>
+                    <div class="resa">
+                        <a href="{{ path('users_contact') }}">
+                            <button type="button" class="btn btn-primary">Je réserve
+                            </button>
+                        </a>
+                    </div>
+                    <img src="{{ asset('img/vsl.jpeg') }}" alt="" class="img-fluid imgResa">
                 </div>
-                <div class="col-lg-10 resa">
-                    <button type="button" class="btn btn-primary">Je réserve</button>
-                </div>
-                <img src="{{ asset('img/ambu_legere.jpg') }}" alt="" class="img-fluid">
-
-            </div>
-            <div class="col-12 col-lg-4 box">
-                <div class="col-lg-12 coulTitre">
-                    <h3 class="titreBox3">Véhicule sanitaire léger</h3>
-                </div>
-                <div class="col-lg-10 resa">
-                    <button type="button" class="btn btn-primary">Je réserve</button>
-                </div>
-                <img src="{{ asset('img/vsl.jpeg') }}" alt="" class="img-fluid">
-
             </div>
         </div>
     </article>
 
-
-{% endblock %}
-{% block footer %}
-    <div class="container-fluid d-flex justify-content-center  footer">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-1">
-                <a href="">
-                    <img src="{{ asset('img/fleche.png') }}" alt="" class="img-fluid">
-                </a>
+    <section>
+        <div class="container-fluid d-lg-flex text-center">
+            <div class="col-lg-6">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/JLRZcdFpP2Y"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
             </div>
-            <div class="col-1">
-                <img src="{{ asset('img/ambulance_icone.png') }}" alt="" class="img-fluid">
-            </div>
-            <div class="col-1">
-                <a href="https://www.facebook.com/pages/Sarl-Ambulances-Groupe-33/1205770899520102">
-                    <img src="{{ asset('img/facebook.png') }}" alt="" class="img-fluid">
-                </a>
+            <div class="col-lg-6">
+                <p>Les Ambulances Groupe33 mettent à votre disposition 2 types d'ambulances : lourdes et légères, selon les besoins dus à l'intervention.
+                    Nous intervenons à la demande des établissements de soins pour le transport allongé :
+                    star-of-lifePour les particuliers :
+                    Nous sommes à la disposition de tous les établissements de soins : cliniques, hôpitaux, laboratoires, cabinets médicaux, maisons de retraite, centre de rééducation...
+                    star-of-lifePour les professionnels :
+                    Nous intervenons pour le transport de patients pour différentes demandes : urgences, entrée et sortie d'hôpital, consultation médicale, examen biologique, rapatriement sanitaire, liaison SAMU.
+                </p>
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}
+

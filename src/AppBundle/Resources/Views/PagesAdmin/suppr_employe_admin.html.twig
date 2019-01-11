@@ -1,0 +1,39 @@
+{% extends "@App/BaseAdmin/base.html.twig" %}
+
+{% block content %}
+
+    <div class="container-fluid  fondEmp">
+        <div class="container  menuEmp ">
+            <div class="row text-center">
+                <div class="col-md-12 d-lg-flex navEmp">
+
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#" class="">Profil employé</a>
+                        </h4>
+                    </div>
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#">Liste d'information</a>
+                        </h4>
+                    </div>
+                    <div class="col-md-4 d-none d-lg-block">
+                        <h4>
+                            <a href="#" class="aEmpDoc">Liste documents</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-12 scroll  mt-5">
+                <h3>L'employé à bien été supprimé</h3>
+            </div>
+            <a href="{{ path('admin_employes') }}">Retour à la liste des employés</a>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

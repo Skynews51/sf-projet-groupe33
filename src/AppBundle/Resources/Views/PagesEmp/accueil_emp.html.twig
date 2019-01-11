@@ -1,55 +1,65 @@
-{% extends "@App/Base/base.html.twig" %}
-
-
-
+{% extends "@App/BaseEmp/base.html.twig" %}
 
 
 {% block content %}
 
-    <div class="container-fluid d-none d-md-block">
+    <div class="container-fluid ">
         <div class="utilisateur">
-            <div class="col-2">
+            <div class="col-2 ">
                 {% if app.user %}
-                    <a href="{{ path('emp_profil') }}" class=""> <h4 class="nomUtil">{{ app.user.username }}</h4></a>
+                    <a href="{{ path('emp_profil') }}">
+                        <p class="nomUtil">{{ app.user.username }}
+                        </p>
+                    </a>
                 {% endif %}
-                <p><a href="{{ path('fos_user_security_login') }}" class="deco">Deconnexion</a></p>
+                <p>
+                    <a href="{{ path('fos_user_security_login') }}" class="deco">Deconnexion</a>
+                </p>
             </div>
         </div>
     </div>
-
     <div class="container-fluid  fondEmp">
-        <div class="container text-center menu ">
-
-            <div class="row ">
-                <div class="navEmp col-12  d-flex">
-                    <div class="col-3  d-md-none">
+        <div class="container text-center menuEmp ">
+            <div class="row">
+                <div class="col-12 d-lg-flex navEmp">
+                    <div class="col-3 col-sm-2 col-md-2 d-lg-none hamb">
                         <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
                     </div>
-                    <div class="utilisateur">
-                        <div class="col-2 offset-8 d-md-none">
-                            {% if app.user %}
-                                <a href="{{ path('emp_profil') }}" class=""> <h4 class="nomUtil">{{ app.user.username }}</h4></a>
-                            {% endif %}
-                            <p><a href="{{ path('fos_user_security_login') }}" class="deco">Deconnexion</a></p>
+                    <div class="col-6 d-lg-none menuSlide">
+                        <div class="col-12 mt-4">
+                            <p><a href="{{ path('accueil_emp') }}" class="aEmpAccueil">Accueil </a></p>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p><a href="#" class="aEmpDoc">Mes documents</a></p>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p><a href="#">Notes d'information</a></p>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p><a href="{{ path('emp_profil') }}" class="">Mon profil</a></p>
                         </div>
                     </div>
-                    <div class="col-3 d-none d-md-block">
-                        <h4><a href="{{ path('accueil_emp') }}" class="aEmpAccueil">Accueil </a></h4>
+                    <div class="col-3 d-none d-lg-block">
+                        <h4>
+                            <a href="{{ path('accueil_emp') }}" class="aEmpAccueil">Accueil </a>
+                        </h4>
                     </div>
 
-                    <div class="col-3 d-none d-md-block">
-                        <h4><a href="#" class="aEmpDoc">Mes documents</a></h4>
+                    <div class="col-3 d-none d-lg-block">
+                        <h4>
+                            <a href="#" class="aEmpDoc">Mes documents</a>
+                        </h4>
                     </div>
-                    <div class="col-3 d-none d-md-block">
-                        <h4><a href="#">Notes d'information</a></h4>
+                    <div class="col-3 d-none d-lg-block">
+                        <h4>
+                            <a href="#">Notes d'information</a>
+                        </h4>
                     </div>
-
-
-                        <div class="col-3 d-none d-md-block">
-
-                            <h4><a href="{{ path('emp_profil') }}" class="">Mon profil</a></h4>
-                        </div>
-
+                    <div class="col-3 d-none d-lg-block">
+                        <h4>
+                            <a href="{{ path('emp_profil') }}" class="">Mon profil</a>
+                        </h4>
+                    </div>
                 </div>
             </div>
             <div class="row col-12 justify-content-center mt-5 ">
