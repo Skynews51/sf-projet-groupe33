@@ -18,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminEmpController extends Controller
 {
     /**
-     * @Route("/admin/employes", name="admin_employes")
+     * @Route("/admin", name="admin_employes")
      */
     public function listeAdminEmp(){
         $repository = $this->getDoctrine()->getRepository(User::class);
@@ -31,7 +31,36 @@ class AdminEmpController extends Controller
 
         );
     }
+    /**
+     * @Route("/admin/update/emp/formulaire/{id}", name="admin_update_emp_form")
+     */
+    public function AdminUpdateEmpAction(Request $request,$id)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $employes =$this->getDoctrine()->getRepository(User::class)->find($id);
+        $form = $this->createForm(UserType::class, $employes);
 
+        //j'associe les données envoyées par le client via le formulaire à mettre sur la variable $form.
+        // Donc la variable $form contient aussi les données
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $form->getData();
+            $entityManager->persist($employes);
+            $entityManager->flush();
+            $this->addFlash('notice',
+                'Les modifications ont bien été enregistré');
+
+            return $this->redirectToRoute('admin_employes');
+        }
+        return $this->render('@App/PagesAdmin/admin_update_emp_form.html.twig',
+            [
+
+                'form' =>$form->createView()
+
+            ]
+
+        );
+    }
     /**
      * @Route("/admin/supprimer/{id}", name="admin_employe_supprimer")
      */
@@ -43,6 +72,8 @@ class AdminEmpController extends Controller
 
         $entityManager->remove($user);
         $entityManager->flush();
+        $this->addFlash('notice',
+            'L\'employé à bien été enregistré');
 
         return $this->render('@App/PagesAdmin/suppr_employe_admin.html.twig');
     }
@@ -78,14 +109,14 @@ class AdminEmpController extends Controller
         }
 
         return $this->render('@App/PagesAdmin/Admin_emp_form.html.twig',
+
             [
-
                 'form' =>$form->createView()
-
             ]
 
         );
 
 
-            }
+    }
+
 }

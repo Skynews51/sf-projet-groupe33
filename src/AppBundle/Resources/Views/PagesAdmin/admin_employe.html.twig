@@ -24,29 +24,49 @@
                     </div>
                 </div>
             </div>
-            <div class=" col-md-12 scroll  mt-5">
-                <div class="col-md-12">
+            <div class=" col-md-12   mt-5">
+                <div class="col-md-12  text-center">
                     <h3>Vous êtes sur la page administrateur</h3>
                     <a href="{{ path('admin_form_employes') }}">
                         <button type="button" class="btn btn-outline-info">Ajouter un employé</button>
                     </a>
                 </div>
-                {% for user in users %}
-                    <div class="col-md-2">
-                        <p>Nom : {{ user.nom }}</p>
-                        <p>Prénom : {{ user.prenom }}</p>
-                        <p>Pseudo : {{ user.username }}</p>
-                        <a href="{{ path('admin_employe_supprimer', {'id': user.id }) }}"><button type="button" class="btn btn-danger">SUPPRIMEZ</button>
-                        </a>
-
-                        {#<p>Date de naissance : {{ user.dateNaissance| date('m/d/Y') }}</p>
-                        <p>Date d'embauche : {{ user.dateEmbauche| date('m/d/Y')}}</p>
-                        <p>Lieu de travail : {{ user.site }}</p>#}
-
-
-
+                <div class="row d-flex ">
+                    <div class="offset-1 col-1">
+                        <h4>Nom</h4>
                     </div>
-                {% endfor %}
+                    <div class="offset-1 col-1">
+                        <h4>Prénom</h4>
+                    </div>
+                    <div class="offset-2 col-3">
+                        <h4>Pseudo</h4>
+                    </div>
+                </div>
+                <div class="scroll col-12 ">
+                    {% for user in users %}
+                        <div class=" d-flex text-center  justify-content-between col-md-12 mt-2">
+                            <div class="col-2">
+                                <p>{{ user.nom }}</p>
+                            </div>
+                            <div class="col-2">
+                                <p> {{ user.prenom }}</p>
+                            </div>
+                            <div class="col-2">
+                                <p> {{ user.username }}</p>
+                            </div>
+                            <div class="col-4">
+
+                                <a href="{{ path('admin_update_emp_form', {'id': user.id}) }}">
+                                    <button type="button" class="btn btn-outline-success mr-2">MODIFIER</button></a>
+
+                                <a href="{{ path('admin_employe_supprimer', {'id': user.id }) }}">
+                                    <button type="button" class="btn btn-outline-danger">SUPPRIMER</button>
+                                </a>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

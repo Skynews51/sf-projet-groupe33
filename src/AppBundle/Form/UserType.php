@@ -10,6 +10,7 @@ namespace AppBundle\Form;
 
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -63,10 +64,20 @@ class UserType extends AbstractType
                 'widget'=>'single_text',
                 'format' => 'yyyy-MM-dd'
             ))
-            ->add('site', TextareaType::class, array(
-                'attr'=>array(
-                    'placeholder'=>'Veuillez entrez le lieu'
+            ->add('site', ChoiceType::class, array(
+                'choices'=>array(
+                    'Grézillac'=>'Grézillac',
+                    'Vayres'=>'Vayres',
+                    'Saint Magne de Castillon'=>'Saint Magne de Castillon'
                 )
+            ))
+            ->add('enabled', ChoiceType::class, array(
+                'choices' =>array(
+                    'Oui'=>1,
+                    'Non'=> 0,
+
+
+                ),
             ))
             ->add('save', SubmitType::class, array('label' => 'Envoyer'))
 

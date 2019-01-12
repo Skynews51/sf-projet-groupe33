@@ -109,7 +109,41 @@
             </div>
         </div>
 
-
+<div class="container">
+    <h2>Formulaire de contact</h2>
+    <div class="col-10 ">
+        <div>
+            {{ form_start(form) }}
+            {{ form_label(form.nom, 'Nom', {'label_attr':{'class':'label' }}) }}
+            {{ form_errors(form.nom) }}
+        </div>
+        <div>
+            {{ form_widget(form.nom,{'attr' : {'class': 'form-control'}}) }}
+        </div>
+        <div>
+            {{ form_label(form.email, 'Email', {'label_attr':{'class':'label' }}) }}
+            {{ form_errors(form.email) }}
+        </div>
+        <div>
+            {{ form_widget(form.email,{'attr' : {'class': 'form-control'}}) }}
+        </div>
+        <div>
+            {{ form_label(form.sujet, 'Sujet', {'label_attr':{'class':'label' }}) }}
+            {{ form_errors(form.sujet) }}
+        </div>
+        <div>
+            {{ form_widget(form.sujet, {'attr' : {'class': 'form-control'}}) }}
+        </div>
+        <div>
+            {{ form_label(form.message, 'Message', {'label_attr':{'class':'label' }}) }}
+            {{ form_errors(form.message) }}
+        </div>
+        <div>
+            {{ form_widget(form.message, {'attr' : {'class': 'form-control'}}) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>
 
     {% endblock %}
 

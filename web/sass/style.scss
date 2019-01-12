@@ -331,9 +331,14 @@ body{
 }
 /*---------css administrateur------------------------------------------------------------------------------------*/
 .scroll{
+  max-height: 370px;
+  overflow-y: scroll;
+}
+.scrollForm{
   max-height: 500px;
   overflow-y: scroll;
 }
+
 
 /*---------css media queries-------------------------------------------------------------------------------------*/
 @media screen and (max-width: 996px){
