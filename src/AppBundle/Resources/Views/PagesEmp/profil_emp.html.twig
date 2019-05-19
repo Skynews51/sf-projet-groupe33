@@ -6,7 +6,7 @@
 
 {% block content %}
 
-
+<section>
     <div class="container-fluid ">
         <div class="utilisateur">
             <div class="offset-10 col-2">
@@ -19,6 +19,7 @@
             </div>
         </div>
     </div>
+</section>
 
     <div class="container-fluid  fondEmp">
         <div class="container text-center menuEmp ">
@@ -65,9 +66,8 @@
                 </div>
             </div>
             <div class="row col-12 align-items-end mt-5 ">
-                <div class="">
-
-                        <h5>{{ app.user.nom }}</h5>
+                <div>
+                    <h5>{{ app.user.nom }}</h5>
                     <h5>{{ app.user.prenom }}</h5>
                     <h5>{{ app.user.dateNaissance | date('d/m/Y') }}</h5>
                     <h5>{{ app.user.email }}</h5>
@@ -75,9 +75,6 @@
                     <h5>{{ app.user.adresse }}</h5>
                     <h5>{{ app.user.dateEmbauche | date('d/m/Y') }}</h5>
                     <h5>{{ app.user.site }}</h5>
-
-
-
 
                 </div>
             </div>

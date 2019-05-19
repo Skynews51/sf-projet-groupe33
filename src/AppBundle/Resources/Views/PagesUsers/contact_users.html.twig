@@ -1,149 +1,158 @@
 {% extends "@App/Base/base.html.twig" %}
 
+{% block title %}Contact{% endblock %}
 
 {% block header%}
 
     <header>
-
-        <div class="container-fluid ">
-
-            <div class="row d-lg-flex align-items-center sticky">
-                <div class="col-2  col-md-1 col-lg-1">
-                    <img src="{{ asset('img/7236b6d3f921.png') }}" alt="croix de vie" class="img-fluid">
-                </div>
-                <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
-                    <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
-                </div>
-                <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
-                    <h2 class="nav">
-                        <a href="{{ path('accueil_users') }}" class="nav nav1">Accueil </a>
-                    </h2>
-                </div>
-                <div class="col-lg-2 d-none d-lg-block">
-                    <h2 class="nav">
-                        <a href="{{ path('users_ambulances') }}"  class="nav" >Ambulances</a>
-                    </h2>
-                </div>
-                <div class="col-lg-2 d-none d-lg-block ">
-                    <h2 class="nav">
-                        <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav">Vsl & taxis</a>
-                    </h2>
-                </div>
-
-                <div class="col-lg-2 d-none d-lg-block ">
-                    <h2 class=" nav">
-                        <a href="{{ path('users_contact') }}" class="nav" id="contactNav">Contact</a>
-                    </h2>
+        <nav>
+            <div class="container-fluid ">
+                <div class="row d-lg-flex align-items-center sticky">
+                    <div class="col-2  col-md-1 col-lg-1">
+                        <img src="{{ asset('img/croix_de_vie.png') }}" alt="croix de vie" class="img-fluid">
+                    </div>
+                    <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
+                        <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
+                    </div>
+                    <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
+                        <h2 class="nav">
+                            <a href="{{ path('accueil_users') }}" class="nav nav1">Accueil </a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block">
+                        <h2 class="nav">
+                            <a href="{{ path('users_ambulances') }}"  class="nav" >Ambulances</a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block ">
+                        <h2 class="nav">
+                            <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav">Vsl & taxis</a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block ">
+                        <h2 class=" nav">
+                            <a href="{{ path('users_contact') }}" class="nav" id="contactNav">Contact</a>
+                        </h2>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
-{% endblock %}
-{% block content %}
-    <div class="container-fluid parallax-window fond" data-parallax="scroll" data-image-src="{{ asset('img/vito_ambu.jpg') }}">
-        <div class="container  justify-content-center align-items-center text-center opacity ">
-            {#<div class="parallax-window" data-parallax="scroll" data-image-src="/path/to/image.jpg"></div>#}
 
-            <div class="col-12">
-                <h3 id="titre"> Les Ambulances Groupe 33 vous accueillent à Grézillac, Vayres et Saint Magne de Castillon</h3>
-            </div>
-            <div class="col-12">
-                <p id="slogan"> <strong> Les Ambulances Groupe 33 toujours à vos côtés !</strong></p>
+{% endblock %}
+
+{% block content %}
+
+    <section>
+        <div class="container-fluid parallax-window fond" data-parallax="scroll" data-image-src="{{ asset('img/vito_ambu.jpg') }}">
+            <div class="container d-flex  justify-content-center align-items-center text-center opacity ">
+                <div class="col-12">
+                    <div class="col-12">
+                        <h1 id="titre" class="big-title"> Les Ambulances Exemple vous accueillent à Grézillac, Vayres et Saint Magne de Castillon</h1>
+                    </div>
+                    <div class="col-12">
+                        <p id="slogan" class="color-title"> <strong> Les Ambulances Exemple toujours à vos côtés !</strong></p>
+                    </div>
+                </div>
             </div>
         </div>
-
-    </div>
+    </section>
 {% endblock %}
     {% block article %}
-        <div class="container-fluid d-lg-flex justify-content-center">
-            <div class="container border shadow d-flex m-3 justify-content-between align-items-center">
-                <div class="col-6 ">
-                    <div class="col-3">
-                        <img src="{{ asset('img/GEOLOC.png') }}" alt="" class="img-fluid">
+        <article>
+            <div class="container-fluid d-lg-flex justify-content-center">
+                <div class="container border shadow d-flex m-3 justify-content-between align-items-center">
+                    <div class="col-6 ">
+                        <div class="col-3">
+                            <img src="{{ asset('img/GEOLOC.png') }}" alt="icone localisation" class="img-fluid">
+                        </div>
+                        <div class="col-8">
+                            <p>Lieu dit Payorgue</p>
+                            <p>33420 GREZILLAC</p>
+                        </div>
                     </div>
-                    <div class="col-8">
-                        <p>Lieu dit Payorgue</p>
-                        <p>33420 GREZILLAC</p>
+                    <div class="col-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.7774759065196!2d-0.19651651202645798!3d44.82787937913626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55454a4922781d%3A0xc42cace5d5d47018!2sAmbulances+Groupe+33!5e1!3m2!1sfr!2sfr!4v1547210132371"
+                                width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-                </div>
-                <div class="col-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.7774759065196!2d-0.19651651202645798!3d44.82787937913626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55454a4922781d%3A0xc42cace5d5d47018!2sAmbulances+Groupe+33!5e1!3m2!1sfr!2sfr!4v1547210132371"
-                            width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid d-lg-flex justify-content-center">
-            <div class="container border shadow d-flex m-3 justify-content-between align-items-center">
-                <div class="col-6">
-                    <div class="col-3">
-                        <img src="{{ asset('img/GEOLOC.png') }}" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-8">
-                        <p>9 Avenue d'Embeyres</p>
-                        <p>33870 VAYRES</p>
+            <div class="container-fluid d-lg-flex justify-content-center">
+                <div class="container border shadow d-flex m-3 justify-content-between align-items-center">
+                    <div class="col-6">
+                        <div class="col-3">
+                            <img src="{{ asset('img/GEOLOC.png') }}" alt="icone localisation" class="img-fluid">
+                        </div>
+                        <div class="col-8">
+                            <p>9 Avenue d'Embeyres</p>
+                            <p>33870 VAYRES</p>
 
+                        </div>
                     </div>
-                </div>
-                <div class="col-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.051422006206!2d-0.3167505844667792!3d44.8946147790983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55363720cac629%3A0xa8bd1e0c5e88272f!2sAmbulances+Groupe+33!5e1!3m2!1sfr!2sfr!4v1547210524310"
-                            width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="col-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.051422006206!2d-0.3167505844667792!3d44.8946147790983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55363720cac629%3A0xa8bd1e0c5e88272f!2sAmbulances+Groupe+33!5e1!3m2!1sfr!2sfr!4v1547210524310"
+                                width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid d-lg-flex justify-content-center">
-            <div class="container border shadow d-flex m-3 justify-content-center align-items-center">
-                <div class="col-6">
-                    <div class="col-3">
-                        <img src="{{ asset('img/GEOLOC.png') }}" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-8">
-                        <p>12 Avenue de la Dordogne</p>
-                        <p>33350 SAINT MAGNE DE CASTILLON</p>
+            <div class="container-fluid d-lg-flex justify-content-center">
+                <div class="container border shadow d-flex m-3 justify-content-center align-items-center">
+                    <div class="col-6">
+                        <div class="col-3">
+                            <img src="{{ asset('img/GEOLOC.png') }}" alt="icone localisation" class="img-fluid">
+                        </div>
+                        <div class="col-8">
+                            <p>12 Avenue de la Dordogne</p>
+                            <p>33350 SAINT MAGNE DE CASTILLON</p>
 
+                        </div>
                     </div>
-                </div>
-                <div class="col-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.03760890797!2d-0.06116078446813567!3d44.854083379098476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55575e9222e13b%3A0xe76830c616291d2a!2sAmbulances+Groupe+33!5e1!3m2!1sfr!2sfr!4v1547210581196"
-                            width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="col-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.03760890797!2d-0.06116078446813567!3d44.854083379098476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55575e9222e13b%3A0xe76830c616291d2a!2sAmbulances+Groupe+33!5e1!3m2!1sfr!2sfr!4v1547210581196"
+                                width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
+        </article>
+        <div class="container  contact-form mb-3">
+            <h2>Formulaire de contact</h2>
+            <div class="col-12 pb-3 shadow">
+                <div>
+                    {{ form_start(form) }}
+                    {{ form_label(form.nom, 'Nom', {'label_attr':{'class':'label' }}) }}
+                    {{ form_errors(form.nom) }}
+                </div>
+                <div>
+                    {{ form_widget(form.nom,{'attr' : {'class': 'form-control'}}) }}
+                </div>
+                <div>
+                    {{ form_label(form.email, 'Email', {'label_attr':{'class':'label' }}) }}
+                    {{ form_errors(form.email) }}
+                </div>
+                <div>
+                    {{ form_widget(form.email,{'attr' : {'class': 'form-control'}}) }}
+                </div>
+                <div>
+                    {{ form_label(form.sujet, 'Sujet', {'label_attr':{'class':'label' }}) }}
+                    {{ form_errors(form.sujet) }}
+                </div>
+                <div>
+                    {{ form_widget(form.sujet, {'attr' : {'class': 'form-control'}}) }}
+                </div>
+                <div>
+                    {{ form_label(form.message, 'Message', {'label_attr':{'class':'label' }}) }}
+                    {{ form_errors(form.message) }}
+                </div>
 
-<div class="container">
-    <h2>Formulaire de contact</h2>
-    <div class="col-10 ">
-        <div>
-            {{ form_start(form) }}
-            {{ form_label(form.nom, 'Nom', {'label_attr':{'class':'label' }}) }}
-            {{ form_errors(form.nom) }}
+                <div>
+                    {{ form_widget(form.message, {'attr' : {'class': 'form-control'}}) }}
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LdoqZsUAAAAAPY_zLXA_jRFuBITqAAZtztVbQst"></div>
+
+                {{ form_end(form) }}
+
+            </div>
         </div>
-        <div>
-            {{ form_widget(form.nom,{'attr' : {'class': 'form-control'}}) }}
-        </div>
-        <div>
-            {{ form_label(form.email, 'Email', {'label_attr':{'class':'label' }}) }}
-            {{ form_errors(form.email) }}
-        </div>
-        <div>
-            {{ form_widget(form.email,{'attr' : {'class': 'form-control'}}) }}
-        </div>
-        <div>
-            {{ form_label(form.sujet, 'Sujet', {'label_attr':{'class':'label' }}) }}
-            {{ form_errors(form.sujet) }}
-        </div>
-        <div>
-            {{ form_widget(form.sujet, {'attr' : {'class': 'form-control'}}) }}
-        </div>
-        <div>
-            {{ form_label(form.message, 'Message', {'label_attr':{'class':'label' }}) }}
-            {{ form_errors(form.message) }}
-        </div>
-        <div>
-            {{ form_widget(form.message, {'attr' : {'class': 'form-control'}}) }}
-        </div>
-        {{ form_end(form) }}
-    </div>
-</div>
 
     {% endblock %}
 

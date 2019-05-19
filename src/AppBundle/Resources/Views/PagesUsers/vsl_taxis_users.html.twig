@@ -1,43 +1,44 @@
 {% extends "@App/Base/base.html.twig" %}
 
+{% block title %}VSL&Taxis{% endblock %}
 
 {% block header %}
-<header>
-    <div class="container-fluid ">
+    <header>
+        <nav>
+            <div class="container-fluid ">
+                <div class="row d-lg-flex align-items-center sticky">
+                    <div class="col-2  col-md-1 col-lg-1">
+                        <img src="{{ asset('img/croix_de_vie.png') }}" alt="croix de vie" class="img-fluid">
+                    </div>
+                    <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
+                        <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
+                    </div>
+                    <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
+                        <h2 class="nav">
+                            <a href="{{ path('accueil_users') }}" class="nav nav1">Accueil </a>
+                        </h2>
+                    </div>
 
-        <div class="row d-lg-flex align-items-center sticky">
-            <div class="col-2  col-md-1 col-lg-1">
-                <img src="{{ asset('img/7236b6d3f921.png') }}" alt="croix de vie" class="img-fluid">
-            </div>
-            <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
-                <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
-            </div>
-            <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
-                <h2 class="nav">
-                    <a href="{{ path('accueil_users') }}" class="nav nav1">Accueil </a>
-                </h2>
-            </div>
+                    <div class="col-lg-2 d-none d-lg-block">
+                        <h2 class="nav">
+                            <a href="{{ path('users_ambulances') }}"  class="nav" >Ambulances</a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block ">
+                        <h2 class="nav">
+                            <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav" id="vslNav">Vsl & taxis</a>
+                        </h2>
+                    </div>
 
-            <div class="col-lg-2 d-none d-lg-block">
-                <h2 class="nav">
-                    <a href="{{ path('users_ambulances') }}"  class="nav" >Ambulances</a>
-                </h2>
+                    <div class="col-lg-2 d-none d-lg-block ">
+                        <h2 class=" nav">
+                            <a href="{{ path('users_contact') }}" class="nav">Contact</a>
+                        </h2>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-2 d-none d-lg-block ">
-                <h2 class="nav">
-                    <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav" id="vslNav">Vsl & taxis</a>
-                </h2>
-            </div>
-
-            <div class="col-lg-2 d-none d-lg-block ">
-                <h2 class=" nav">
-                    <a href="{{ path('users_contact') }}" class="nav">Contact</a>
-                </h2>
-            </div>
-        </div>
-
-    </div>
-</header>
+        </nav>
+    </header>
 {% endblock %}
 {% block carousel %}
     <div class="container-fluid">
@@ -51,13 +52,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 img-fluid" src="{{ asset('img/vsl.jpeg') }}" alt="First slide">
+                        <img class="d-block w-100 img-fluid" src="{{ asset('img/vsl.jpeg') }}" alt="véhicule sanitaire léger">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 img-fluid" src="{{ asset('img/taxi.jpg') }}" alt="Second slide">
+                        <img class="d-block w-100 img-fluid" src="{{ asset('img/taxi.jpg') }}" alt="taxi français">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 img-fluid" src="{{ asset('img/vsl_c4.jpeg') }}" alt="Third slide">
+                        <img class="d-block w-100 img-fluid" src="{{ asset('img/vsl_c4.jpeg') }}" alt="véhicule sanitaire léger">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -71,4 +72,114 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block content %}
+
+    <article>
+        <div class="container">
+            <div class="col-12 text-center">
+                <h3 class="big-title color-title">Déplacement en VSL sur préscription médicale de transport</h3>
+            </div>
+        </div>
+        <div class="container-fluid mt-lg-5 mb-lg-5">
+            <div class="container d-lg-flex justify-content-around ">
+                <div class="col-12 col-md-5 shadow boxAmbu">
+                    <div class="text-center">
+                        <div>
+                            <h3> <strong>Comment en disposer ?</strong></h3>
+                        </div>
+                        <hr>
+                        <h4>A la demande de votre médecin traitant</h4>
+                        <p>En fonction de votre état de santé, vous pouvez bénéficier d'un<strong>TAP</strong>,
+                            (Transport Spécialisé Professionnel), et non d'un transport allongé.</p>
+                        <h4 class="articleAmbu">Quels sont les plus du VSL ? </h4>
+                    </div>
+                    <div>
+                        <p>Comparé à un taxi conventionné, le VSL dispose</p>
+                        <ul>
+                            <li>d'une trousse de soin</li>
+                            <li>de produits sanguins labiles</li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <div class="text-center mb-3 mb-lg-3">
+                        <a href="{{ path('users_contact') }}">Je prends contact</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 shadow boxAmbu">
+                    <div class="text-center">
+                        <div>
+                            <h3> <strong>Prise en charge</strong></h3>
+                        </div>
+                        <hr>
+                        <h4>À la demande du médecin, d'établissements de soins.</h4>
+                        <p>Suite à une <strong>hospitalisation</strong>, traitements et examens, une affectation de longue durée.</p>
+                        <h4 class="articleAmbu">Quels tarifs ? </h4>
+                    </div>
+                    <div>
+                        <p>Tarifs conventionnels pour les VSL. Ces tarifs se voient affectés par la prise en charge
+                            du patient, le forfait départemental et le tarif kilométrique. Vous pouvez être totalement ou
+                            partiellement remboursés par votre assurance maladie et mutuelle.
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="text-center mb-lg-3">
+                        <a href="https://www.ameli.fr/assure/remboursements/rembourse/transport/transport">Ameli</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <hr>
+    <article>
+        <div class="container-fluid ">
+            <div class="col-12 text-center">
+                <h3 class="big-title color-title mb-4">VSL et taxis à votre dispostion à Grézillac, Vayres et Saint-Magne-de-Castillon</h3>
+            </div>
+            <div class="d-lg-flex justify-content-center align-items-center text-center  boxAmbu">
+                <div class="col-12 col-lg-3 picasso">
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h3>Qui peut disposer d'un VSL ?</h3>
+                    <p>Vous pouvez vous voir attribuer ce genre de transport uniquement par votre médecin et/ou des
+                        professionnels de la santé.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-3 fauteuil">
+
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h3>Prise en charge
+                    </h3>
+                    <p>Suite à une hospitalisation, un accident du travail...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="d-lg-flex justify-content-center align-items-center text-center boxAmbu">
+                <div class="col-12   col-lg-3">
+                    <h3>Tarifs conventionnels
+                    </h3>
+                    <p>Les tarifs de vos transports d'ordre sanitaire sont réglementés.</p>
+                </div>
+                <div class="col-12   col-lg-3 carteBleu">
+                </div>
+                <div class="col-12  col-lg-3">
+                    <h3>
+                        Remboursement
+                    </h3>
+                    <p>En fonction de votre situation, le transport en VSL ou taxis conventionnés peut être totalement
+                        ou partiellement remboursé.
+                    </p>
+                </div>
+                <div class="col-12   col-lg-3 bonTransport">
+
+                </div>
+
+            </div>
+        </div>
+    </article>
+    <hr>
 {% endblock %}

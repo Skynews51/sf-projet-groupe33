@@ -1,116 +1,111 @@
+
 {% extends "@App/Base/base.html.twig" %}
-
-
 {% block title %} Accueil {% endblock %}
-
-
-
 {% block header%}
-
     <header>
+        <nav>
+            <div class="container-fluid ">
+                <div class="row d-lg-flex align-items-center sticky">
+                    <div class="col-2  col-md-1 col-lg-1">
+                        <a href="http://localhost:8080/sf-projet-groupe33/web/app_dev.php/admin">
+                            <img src="{{ asset('img/croix_de_vie.png') }}" alt="croix de vie" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
+                        <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
+                    </div>
+                    <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
+                        <h2 class="nav">
+                            <a href="{{ path('accueil_users') }}" class="nav nav1" id="accueilNav">Accueil </a>
+                        </h2>
+                    </div>
 
-        <div class="container-fluid ">
+                    <div class="col-lg-2 d-none d-lg-block">
+                        <h2 class="nav">
+                            <a href="{{ path('users_ambulances') }}"  class="nav" >Ambulances</a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block ">
+                        <h2 class="nav">
+                            <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav">Vsl & taxis</a>
+                        </h2>
+                    </div>
 
-            <div class="row d-lg-flex align-items-center sticky">
-                <div class="col-2  col-md-1 col-lg-1">
-                    <a href="http://localhost:8080/sf-projet-groupe33/web/app_dev.php/admin"> <img src="{{ asset('img/7236b6d3f921.png') }}" alt="croix de vie" class="img-fluid"></a>
-                </div>
-                <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
-                    <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
-                </div>
-                <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
-                    <h2 class="nav">
-                        <a href="{{ path('accueil_users') }}" class="nav nav1" id="accueilNav">Accueil </a>
-                    </h2>
-                </div>
-
-                <div class="col-lg-2 d-none d-lg-block">
-                    <h2 class="nav">
-                        <a href="{{ path('users_ambulances') }}"  class="nav" >Ambulances</a>
-                    </h2>
-                </div>
-                <div class="col-lg-2 d-none d-lg-block ">
-                    <h2 class="nav">
-                        <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav">Vsl & taxis</a>
-                    </h2>
-                </div>
-
-                <div class="col-lg-2 d-none d-lg-block ">
-                    <h2 class=" nav">
-                        <a href="{{ path('users_contact') }}" class="nav">Contact</a>
-                    </h2>
+                    <div class="col-lg-2 d-none d-lg-block ">
+                        <h2 class=" nav">
+                            <a href="{{ path('users_contact') }}" class="nav">Contact</a>
+                        </h2>
+                    </div>
                 </div>
             </div>
-
-        </div>
-
+        </nav>
     </header>
 {% endblock %}
 
 {% block content %}
 
-    <div class="container-fluid parallax-window fond" data-parallax="scroll" data-image-src="{{ asset('img/ambu_toyota.jpg') }}">
-        <div class="container  justify-content-center align-items-center text-center opacity ">
-            {#<div class="parallax-window" data-parallax="scroll" data-image-src="/path/to/image.jpg"></div>#}
-
-            <div class="col-12">
-                <h3 id="titre"> Les Ambulances Groupe 33, toute notre compétence professionnelle pour votre santé</h3>
-            </div>
-            <div class="col-12">
-                <p id="slogan"> <strong> Les Ambulances Groupe 33 toujours à vos côtés !</strong></p>
+    <section>
+        <div class="container-fluid parallax-window fond" data-parallax="scroll" data-image-src="{{ asset('img/ambu_toyota.jpg') }}">
+            <div class="container d-flex justify-content-center align-items-center text-center opacity ">
+                <div class="col-12">
+                    <div class="col-12">
+                        <h1 id="titre" class="big-title"> Les Ambulances Exemple, toute notre compétence professionnelle pour votre santé</h1>
+                    </div>
+                    <div class="col-12">
+                        <p class="color-title"> <strong> Les Ambulances Exemple toujours à vos côtés !</strong></p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container d-flex align-items-center ">
-        <div class="col-12 col-lg-6">
-            <div class="col-12">
-                <h2 class="about">Ambulances Groupe 33 SARL,
-                    à votre service en Gironde (33) !</h2>
+        <div class="container mb-lg-3 mt-lg-3 d-flex align-items-center border shadow">
+            <div class="col-12 col-lg-6">
+                <div class="col-12">
+                    <h3 class="big-title color-title">Ambulances Exemple SARL,
+                        à votre service en Gironde (33) !</h3>
+                </div>
+                <div class="col-lg-12">
+                    <p class="article">La SARL Ambulances Exemple est implantée en Gironde (33), sur plusieurs sites : Branne, Vayres, Saint-Magne-de-Castillon et Grézillac. Les véhicules se déplacent dans toute la France et en Europe pour le transport de personnes.
+
+                        L'équipe de la société Ambulances Exemple reste à votre service pour le transport en ambulance, en taxi ou en VSL, pour des trajets toutes distances.
+                        Le dévouement de l'équipe et sa gentillesse font partie de nos atouts.
+                        Nous possédons des ambulances pour le transport de patients assis et couchés pour des trajets vers les hôpitaux, les maisons de retraite et pour les rendez-vous médicaux.
+                        Notre flotte de taxis vous transporte où vous le souhaitez, partout en France entière et en Europe.
+                        Nos véhicules sont neufs et régulièrement révisés : la sécurité et le confort de nos passagers sont nos priorités.
+                        Pour de plus amples informations, contactez la SARL Ambulances Exemple en Gironde !.
+                    </p>
+                </div>
+
             </div>
-            <div class="col-lg-12">
-                <p>La SARL Ambulances Groupe 33 est implantée en Gironde (33), sur plusieurs sites : Branne, Vayres, Saint-Magne-de-Castillon et Grézillac. Les véhicules se déplacent dans toute la France et en Europe pour le transport de personnes.
+            <div class="d-none d-md-block col-lg-6">
 
-                    L'équipe de la société Ambulances Groupe 33 reste à votre service pour le transport en ambulance, en taxi ou en VSL, pour des trajets toutes distances.
-                    Le dévouement de l'équipe et sa gentillesse font partie de nos atouts.
-                    Nous possédons des ambulances pour le transport de patients assis et couchés pour des trajets vers les hôpitaux, les maisons de retraite et pour les rendez-vous médicaux.
-                    Notre flotte de taxis vous transporte où vous le souhaitez, partout en France entière et en Europe.
-                    Nos véhicules sont neufs et régulièrement révisés : la sécurité et le confort de nos passagers sont nos priorités.
-                    Pour de plus amples informations, contactez la SARL Ambulances Groupe 33 en Gironde !.
-                </p>
+                <a href="{{ asset('img/ambulance_2.png') }}">
+                    <img src="{{ asset('img/ambulance_2.png') }}" alt="ambulance" class="img-fluid">
+                </a>
             </div>
-
         </div>
-        <div class="d-none d-md-block col-lg-6">
+        <div class="col-12 d-md-none">
 
-            <img src="{{ asset('img/ambulance_2.png') }}" alt="" class="img-fluid">
-
+            <a href="{{ asset('img/ambulance_2.png') }}">
+                <img src="{{ asset('img/ambulance_2.png') }}" alt="ambulance" class="img-fluid">
+            </a>
         </div>
-    </div>
-    <div class="col-12 d-md-none">
-
-        <img src="{{ asset('img/ambulance_2.png') }}" alt="" class="img-fluid">
-
-    </div>
+    </section>
     <article>
         <div class="container-fluid parallax-window milieu" data-parallax="scroll" data-image-src="{{ asset('img/ambu5.jpg') }}">
             <div class="container d-flex  justify-content-around align-items-center text-center opacity">
                 <div class="d-none d-md-block col-lg-5  ">
 
-                    <img src="{{ asset('img/ambulance_brancard2.jpg') }}" alt="" class="img-fluid imgMilieu">
+                    <a href="{{ asset('img/ambulance_brancard2.jpg') }}">
+                        <img src="{{ asset('img/ambulance_brancard2.jpg') }}" alt="brancard" class="img-fluid imgMilieu">
+                    </a>
                 </div>
-                {#<div class="d-none col-lg-8 articleMilieu">
-                    <p>Forte de 50 ambulanciers et 40 véhicules ambulances,
-                        VSL et taxis, notre société créée en 2000
-                        à Branne est présente sur 4 sites.
-                    </p>
-                </div>#}
                 <div class="col-lg-6">
-                    <p>
-                        Bienvenue aux AMBULANCES GROUPE 33. Notre société, créée en 2000, n'a cessé jusqu'a ce jour de se développer.
+                    <p class="article">
+                        Bienvenue aux AMBULANCES EXEMPLE. Notre société, créée en 2000, n'a cessé jusqu'a ce jour de se développer.
                         Elle est actuellement composée d'ambulanciers diplômés répartis sur quatre sites à Branne, Grézillac, Vayres et Saint-Magne-de-Castillon, en Gironde.
                         Notre expérience est à votre service pour vous apporter la sécurité nécessaire dans vos transports, ainsi qu'un service tourné sur la relation humaine.
-                        Les Ambulances Groupe 33 toujours à vos cotés
+                        Les Ambulances Groupe Exemple toujours à vos cotés
                     </p>
                 </div>
             </div>
@@ -119,7 +114,7 @@
     <article>
         <div class="container-fluid ">
             <div class="container d-lg-flex text-center justify-content-center align-items-center mt-3 ">
-                <div class="col-12  col-lg-4 mb-3 box">
+                <div class="col-12  col-lg-4 mb-3 box ">
                     <div class="coulFond ">
                         <p class="titreBox1">Ambulance Lourde</p>
                     </div>
@@ -129,7 +124,7 @@
                             </button>
                         </a>
                     </div>
-                    <img src="{{ asset('img/ambu_atsu.jpg') }}" alt="" class="img-fluid imgResa">
+                    <img src="{{ asset('img/ambu_atsu.jpg') }}" alt="ambulance lourde" class="img-fluid imgResa shadow">
                 </div>
                 <div class="col-12 col-lg-4 mb-3 box">
                     <div class="coulFond">
@@ -141,7 +136,7 @@
                             </button>
                         </a>
                     </div>
-                    <img src="{{ asset('img/ambu_legere.jpg') }}" alt="" class="img-fluid imgResa">
+                    <img src="{{ asset('img/ambu_legere.jpg') }}" alt="ambulance légère" class="img-fluid imgResa shadow">
                 </div>
                 <div class="col-12 col-lg-4 mb-3 box">
                     <div class="coulFond">
@@ -153,22 +148,26 @@
                             </button>
                         </a>
                     </div>
-                    <img src="{{ asset('img/vsl.jpeg') }}" alt="" class="img-fluid imgResa">
+                    <img src="{{ asset('img/vsl.jpeg') }}" alt="véhicule sanitaire léger" class="img-fluid imgResa shadow">
                 </div>
             </div>
         </div>
     </article>
-
+    <hr>
     <section>
-        <div class="container-fluid d-lg-flex text-center">
-            <div class="col-lg-6">
+        <div class="container-fluid  text-center">
+            <div class="col-12 text-center mb-3">
+                <h2 class="big-title color-title">Ambulancier bien plus qu'un métier une véritable passion</h2>
+
+            </div>
+            <div class="offset-3 col-6">
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/JLRZcdFpP2Y"
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media;
                     gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
-            <div class="col-lg-6">
-                <p>Les Ambulances Groupe33 mettent à votre disposition 2 types d'ambulances : lourdes et légères, selon les besoins dus à l'intervention.
+            <div class="offset-2 col-8">
+                <p class="article">Les Ambulances Exemple mettent à votre disposition 2 types d'ambulances : lourdes et légères, selon les besoins dus à l'intervention.
                     Nous intervenons à la demande des établissements de soins pour le transport allongé :
                     star-of-lifePour les particuliers :
                     Nous sommes à la disposition de tous les établissements de soins : cliniques, hôpitaux, laboratoires, cabinets médicaux, maisons de retraite, centre de rééducation...

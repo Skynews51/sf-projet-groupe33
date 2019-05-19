@@ -1,0 +1,56 @@
+{% extends "@App/Base/base.html.twig" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block header%}
+
+    <header>
+        <nav>
+            <div class="container-fluid ">
+                <div class="row d-lg-flex align-items-center sticky">
+                    <div class="col-2  col-md-1 col-lg-1">
+                        <img src="{{ asset('img/croix_de_vie.png') }}" alt="croix de vie" class="img-fluid">
+                    </div>
+                    <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
+                        <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
+                    </div>
+                    <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
+                        <h2 class="nav">
+                            <a href="{{ path('accueil_users') }}" class="nav nav1">Accueil </a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block">
+                        <h2 class="nav">
+                            <a href="{{ path('users_ambulances') }}"  class="nav" >Ambulances</a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block ">
+                        <h2 class="nav">
+                            <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav">Vsl & taxis</a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block ">
+                        <h2 class=" nav">
+                            <a href="{{ path('users_contact') }}" class="nav" id="contactNav">Contact</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
+{% block flash %}
+    <div class="container-fluid d-flex justify-content-center text-center notice">
+
+
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-notice">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
+
+
+

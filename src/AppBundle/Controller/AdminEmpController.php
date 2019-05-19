@@ -17,50 +17,50 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminEmpController extends Controller
 {
-    /**
-     * @Route("/admin", name="admin_employes")
-     */
-    public function listeAdminEmp(){
-        $repository = $this->getDoctrine()->getRepository(User::class);
-        $users = $repository->findAll();
-        return $this->render('@App/PagesAdmin/admin_employe.html.twig',
+    ///**
+     //* @Route("/admin", name="admin_employes")
+    // */
+    //public function listeAdminEmp(){
+       // $repository = $this->getDoctrine()->getRepository(User::class);
+        //$users = $repository->findAll();
+        //return $this->render('@App/PagesAdmin/admin_employe.html.twig',
 
-            [
-                'users'=>$users
-            ]
+            //[
+             //   'users'=>$users
+           // ]
 
-        );
-    }
-    /**
-     * @Route("/admin/update/emp/formulaire/{id}", name="admin_update_emp_form")
-     */
-    public function AdminUpdateEmpAction(Request $request,$id)
-    {
-        $entityManager = $this->getDoctrine()->getManager();
-        $employes =$this->getDoctrine()->getRepository(User::class)->find($id);
-        $form = $this->createForm(UserType::class, $employes);
+       // );
+   // }
+
+   // /**
+    // * @Route("/admin/update/emp/formulaire/{id}", name="admin_update_emp_form")
+    // */
+   // public function AdminUpdateEmpAction(Request $request,$id)
+   // {
+     //   $entityManager = $this->getDoctrine()->getManager();
+       // $employes =$this->getDoctrine()->getRepository(User::class)->find($id);
+       // $form = $this->createForm(UserType::class, $employes);
 
         //j'associe les données envoyées par le client via le formulaire à mettre sur la variable $form.
         // Donc la variable $form contient aussi les données
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $form->getData();
-            $entityManager->persist($employes);
-            $entityManager->flush();
-            $this->addFlash('notice',
-                'Les modifications ont bien été enregistré');
+       // $form->handleRequest($request);
+       // if ($form->isSubmitted() && $form->isValid()) {
+         //   $form->getData();
+         //   $entityManager->persist($employes);
+         //   $entityManager->flush();
+         //   $this->addFlash('notice',
+          //      'Les modifications ont bien été enregistré');
 
-            return $this->redirectToRoute('admin_employes');
-        }
-        return $this->render('@App/PagesAdmin/admin_update_emp_form.html.twig',
-            [
+           // return $this->redirectToRoute('admin_employes');
+      //  }
+      //  return $this->render('@App/PagesAdmin/admin_update_emp_form.html.twig',
 
-                'form' =>$form->createView()
+           // [
+           //     'form' =>$form->createView()
+           // ]
+       // );
+   // }
 
-            ]
-
-        );
-    }
     /**
      * @Route("/admin/supprimer/{id}", name="admin_employe_supprimer")
      */
@@ -98,25 +98,18 @@ class AdminEmpController extends Controller
                 $this->addFlash('notice',
                     'L\'employé a bien été enregistré');
 
-
                 return $this->redirectToRoute('admin_employes');
             }else{
                 $this->addFlash('notice',
                     'Une erreur est survenue lors de votre saisi'
                 );
-
             }
         }
-
         return $this->render('@App/PagesAdmin/Admin_emp_form.html.twig',
 
             [
                 'form' =>$form->createView()
             ]
-
         );
-
-
     }
-
 }

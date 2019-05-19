@@ -3,40 +3,42 @@
 {% block title %} Ambulances {% endblock %}
  {% block header %}
      <header>
-         <div class="container-fluid ">
+         <nav>
+             <div class="container-fluid ">
 
-             <div class="row d-lg-flex align-items-center sticky">
-                 <div class="col-2  col-md-1 col-lg-1">
-                     <img src="{{ asset('img/7236b6d3f921.png') }}" alt="croix de vie" class="img-fluid">
-                 </div>
-                 <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
-                     <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
-                 </div>
-                 <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
-                     <h2 class="nav">
-                         <a href="{{ path('accueil_users') }}" class="nav nav1">Accueil </a>
-                     </h2>
+                 <div class="row d-lg-flex align-items-center sticky">
+                     <div class="col-2  col-md-1 col-lg-1">
+                         <img src="{{ asset('img/croix_de_vie.png') }}" alt="croix de vie" class="img-fluid">
+                     </div>
+                     <div class="col-2 offset-7 col-md-1 offset-md-9 d-lg-none">
+                         <img src="{{ asset('img/menu_hamb.png') }}" alt="menu" class="img-fluid">
+                     </div>
+                     <div class="offset-lg-2 col-lg-2 d-none d-lg-block ">
+                         <h2 class="nav">
+                             <a href="{{ path('accueil_users') }}" class="nav nav1">Accueil </a>
+                         </h2>
+                     </div>
+
+                     <div class="col-lg-2 d-none d-lg-block">
+                         <h2 class="nav">
+                             <a href="{{ path('users_ambulances') }}"  class="nav" id="ambuNav">Ambulances</a>
+                         </h2>
+                     </div>
+                     <div class="col-lg-2 d-none d-lg-block ">
+                         <h2 class="nav">
+                             <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav">Vsl & taxis</a>
+                         </h2>
+                     </div>
+
+                     <div class="col-lg-2 d-none d-lg-block ">
+                         <h2 class=" nav">
+                             <a href="{{ path('users_contact') }}" class="nav" >Contact</a>
+                         </h2>
+                     </div>
                  </div>
 
-                 <div class="col-lg-2 d-none d-lg-block">
-                     <h2 class="nav">
-                         <a href="{{ path('users_ambulances') }}"  class="nav" id="ambuNav">Ambulances</a>
-                     </h2>
-                 </div>
-                 <div class="col-lg-2 d-none d-lg-block ">
-                     <h2 class="nav">
-                         <a href="{{ path('users_vsl-taxi') }}"  class="nav vslNav">Vsl & taxis</a>
-                     </h2>
-                 </div>
-
-                 <div class="col-lg-2 d-none d-lg-block ">
-                     <h2 class=" nav">
-                         <a href="{{ path('users_contact') }}" class="nav" >Contact</a>
-                     </h2>
-                 </div>
              </div>
-
-         </div>
+         </nav>
      </header>
  {% endblock %}
 {% block carousel %}
@@ -51,13 +53,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 img-fluid" src="{{ asset('img/ambu1.jpeg') }}" alt="First slide">
+                        <img class="d-block w-100 img-fluid" src="{{ asset('img/ambu1.jpeg') }}" alt="ambulance">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 img-fluid" src="{{ asset('img/ambu3.jpeg') }}" alt="Second slide">
+                        <img class="d-block w-100 img-fluid" src="{{ asset('img/ambu3.jpeg') }}" alt="ambulance">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 img-fluid" src="{{ asset('img/ambu4.jpg') }}" alt="Third slide">
+                        <img class="d-block w-100 img-fluid" src="{{ asset('img/ambu4.jpg') }}" alt="ambulance">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -74,32 +76,37 @@
 {% endblock %}
 {% block content %}
     <article>
+        <div class="container">
+            <div class="col-12 text-center">
+                <h3 class="big-title color-title">Vos ambulances dans les plus brefs délais!</h3>
+            </div>
+        </div>
         <div class="container-fluid mt-lg-5 mb-lg-5">
             <div class="container d-lg-flex justify-content-around ">
-                <div class="col-12 col-md-5 boxAmbu">
+                <div class="col-12 col-md-5 shadow boxAmbu">
                     <div class="text-center">
                         <div>
-                   <h3 > <strong>Ambulances lourdes</strong></h3>
+                            <h3 > <strong>Ambulances lourdes</strong></h3>
                         </div>
                         <hr>
-                        <p>Des véhicules conformes aux réglementations</p>
+                        <p >Des véhicules conformes aux réglementations</p>
                         <h4 class="articleAmbu">Dans quels cas avoir une ambulance lourde ? </h4>
                         <p>Elle est utilisée principalement pour les transports urgents vers des centres hospitaliers
                             ou des cliniques, à la demande </p>
                     </div>
                     <div>
-                    <ul>
-                        <li>du <strong>SAMU</strong></li>
-                        <li>des médecins</li>
-                        <li>d'établissement de soins</li>
-                    </ul>
+                        <ul>
+                            <li>du <strong>SAMU</strong></li>
+                            <li>des médecins</li>
+                            <li>d'établissement de soins</li>
+                        </ul>
                         <hr>
                     </div>
                     <div class="text-center mb-lg-3">
                         <a href="{{ path('users_contact') }}">Je prends contact</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 boxAmbu">
+                <div class="col-12 col-md-5 shadow boxAmbu">
                     <div class="text-center">
                         <h3><strong>Ambulances légère</strong></h3>
                         <hr>
@@ -125,12 +132,13 @@
         </div>
     </article>
     <article>
-        <div class="container articleAmbu">
-            <div class="col-lg-12">
-                <p id="articleAmbu">La société Ambulances Groupe 33, située en Gironde (33),
+        <div class="container-fluid articleAmbu">
+            <div class="col-lg-12 text-center">
+                <p class="article" id="articleAmbu">
+                    La société Ambulances Exemple, située en Gironde (33),
                     reste à votre service pour toute urgence 7j/7 et 24h/24,
                     pour le transport en ambulance, en taxi ou en VSL pour des trajets toutes distances.
-                    La SARL Ambulances Groupe 33 possède des ambulances pour le transport de patients
+                    La SARL Ambulances Exemple possède des ambulances pour le transport de patients
                     assis et couchés pour des trajets vers les hôpitaux, les maisons de retraite et pour les rendez-vous médicaux.
                 </p>
             </div>
@@ -140,15 +148,17 @@
     <section>
         <div class="container d-lg-flex text-center justify-content-around align-items-start mt-5">
             <div class="col-lg-4 ">
-                <img src="{{ asset('img/santé.jpg') }}" alt="" class="img-fluid">
+                <img src="{{ asset('img/santé.jpg') }}" alt="coeur" class="img-fluid">
             </div>
             <div class="col-lg-6">
-                <p>Les <strong> Ambulances Groupe 33</strong>, toujours à vos côtés. C'est avant tout un service humain, plus de 50 ambulanciers
+                <p class="article">
+                    Les <strong> Ambulances Exemple</strong>, toujours à vos côtés. C'est avant tout un service humain, plus de 50 ambulanciers
                     qualifiés à votre disposition. Quand on se fait transporter dans un véhicule de type sanitaire,
                     c'est que la santé ne va pas, donc un moment rarement agréable, c'est pourquoi nous mettons tout
                     en œuvre pour vous alléger cette peine. C'est aussi des ressources matérielles. Près de 40 véhicules
                     fiables, de qualité, confortables pour vous transporter dans les meilleurs délais,
-                    la sécurité restant notre priorité.</p>
+                    la sécurité restant notre priorité.
+                </p>
             </div>
         </div>
     </section>

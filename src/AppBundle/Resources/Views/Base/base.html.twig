@@ -7,23 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('img/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('img/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('img/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('img/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('img/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('img/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <title> {% block title %}  {% endblock %}</title>
 </head>
 <body>
 
 {% block header %}
-
 {% endblock %}
 
 {% block connexion %} {% endblock %}
 {% block carousel %} {% endblock %}
+{% block flash %}
+    <div class="container text-center notice">
+
+
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-notice">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
 {% block content %} {% endblock %}
 {% block article %} {% endblock %}
 
-<div class="container-fluid  footer">
-    <div class="row">
-        <div class="offset-lg-3 col-lg-4">
+<div class="container-fluid footer">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class=" col-lg-2 d-none d-lg-block">
             <p>NAVIGATION</p>
             <ul>
                 <li class="liFoot">
@@ -39,6 +67,22 @@
                     <a href="{{ path('users_contact') }}" class="foot">Contact</a>
                 </li>
             </ul>
+        </div>
+
+        <div class="offset-lg-4 col-lg-1 col-3">
+            <a href="https://www.facebook.com/ambulance-Groupe-33-557264384321025/">
+                <img src="{{ asset('img/facebook_bar.png') }}" alt="" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-3 col-lg-1">
+            <a href="https://www.facebook.com/ambulance-Groupe-33-557264384321025/">
+                <img src="{{ asset('img/insta_bar.png') }}" alt="" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-3 col-lg-1">
+            <a href="https://www.facebook.com/ambulance-Groupe-33-557264384321025/">
+                <img src="{{ asset('img/mail_bar.png') }}" alt="" class="img-fluid">
+            </a>
         </div>
     </div>
 </div>
@@ -61,6 +105,8 @@
 
 </script>
 <script src="{{ asset('script/parallax.js') }}"></script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
 

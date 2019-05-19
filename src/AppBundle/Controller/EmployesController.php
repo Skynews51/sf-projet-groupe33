@@ -23,6 +23,7 @@ class EmployesController extends Controller
         return $this->render('@App/PagesEmp/accueil_emp.html.twig');
 
     }
+
     /**
      * @Route("/profil", name="emp_profil")
      */

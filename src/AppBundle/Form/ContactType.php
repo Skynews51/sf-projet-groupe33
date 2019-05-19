@@ -24,24 +24,24 @@ class ContactType extends AbstractType
     {
         $builder->add('nom', TextareaType::class, array(
             'attr' => array(
-                'placeholder' => 'Veuillez entrez le Nom'
+                'placeholder' => 'Veuillez entrez votre Nom'
             ),
         ))
             ->add('email', TextareaType::class, array(
                 'attr'=>array(
-                    'placeholder'=>'Veuillez entrez l\'email',
+                    'placeholder'=>'Veuillez entrer votre email',
                     'by_reference' => false
 
                 )
             ))
             ->add('sujet', TextareaType::class, array(
                 'attr'=>array(
-                    'placeholder'=>'Veuillez entrez le sujet'
+                    'placeholder'=>'Veuillez entrer le sujet'
                 )
             ))
             ->add('message', TextareaType::class, array(
                 'attr'=>array(
-                    'placeholder'=>'Veuillez entrez votre message'
+                    'placeholder'=>'Veuillez entrer votre message'
                 )
             ))
             ->add('save', SubmitType::class, array('label' => 'Envoyer'))

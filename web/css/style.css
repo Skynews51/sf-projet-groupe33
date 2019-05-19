@@ -1,7 +1,28 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+@import url("https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911");
+@import url("https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Raleway");
 body {
   margin: 0 auto; }
+
+.picasso {
+  background-image: url("../img/c4-picasso.jpeg");
+  background-size: cover;
+  height: 30vh; }
+
+.fauteuil {
+  background-image: url("../img/vsl_fauteuil.jpg");
+  background-size: cover;
+  height: 30vh; }
+
+.carteBleu {
+  background-image: url("../img/carte_bleu.jpg");
+  background-size: cover;
+  height: 30vh; }
+
+.bonTransport {
+  background-image: url("../img/bon_transport.jpg");
+  background-size: cover;
+  height: 30vh; }
 
 .fond {
   height: 80vh;
@@ -12,16 +33,13 @@ body {
   color: white;
   background-color: rgba(0, 0, 0, 0.5); }
 
-.about {
-  color: gray; }
+.big-title {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif; }
 
 .milieu {
   height: 50vh; }
 
-#titre {
-  padding-top: 220px; }
-
-#slogan {
+.color-title {
   font-family: 'Dancing Script', cursive;
   margin-top: 30px;
   color: #0088CC;
@@ -34,7 +52,7 @@ body {
 .sticky {
   position: fixed;
   top: 0;
-  height: 80px;
+  height: 100px;
   width: 100%;
   z-index: 90;
   background-color: white; }
@@ -66,18 +84,21 @@ body {
 /*--------css accueil users---------------------------------------------------------------------------------*/
 .imgMilieu {
   -webkit-transform: scale(1);
-  transform: scale(1);
+  transform: scale(1.1);
   -webkit-filter: sepia(100%);
   filter: sepia(100%);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   border-radius: 3px; }
 
-.imgMilieu:hover {
+.flash, .imgMilieu:hover {
   -webkit-transform: scale(1.3);
-  transform: scale(1.1);
+  transform: scale(1.3);
   -webkit-filter: sepia(0);
-  filter: sepia(0); }
+  filter: sepia(0);
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s; }
 
 .coulFond {
   width: 100%;
@@ -124,10 +145,23 @@ body {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out; }
 
-.box:hover {
+.flash, .box:hover {
   -webkit-transform: scale(1.1);
-  transform: scale(1.1); }
+  transform: scale(1.1);
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s; }
 
+@-webkit-keyframes flash {
+  0% {
+    opacity: .4; }
+  100% {
+    opacity: 1; } }
+@keyframes flash {
+  0% {
+    opacity: .4; }
+  100% {
+    opacity: 1; } }
 .resa {
   position: absolute;
   margin: auto;
@@ -138,12 +172,17 @@ body {
   width: 100px;
   height: 10px; }
 
+.article {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 20px;
+  line-height: 25px; }
+
 /*------------css ambulances users-------------------------------------------------------------------------------------*/
 .articleAmbu {
-  color: #0088CC; }
+  background-color: #0088CC; }
 
 #articleAmbu {
-  color: #0088CC;
+  color: white;
   font-weight: bold; }
 
 .boxAmbu {
@@ -304,5 +343,22 @@ body {
     width: 300px;
     height: 300px;
     text-align: center; } }
+.alert-notice {
+  animation-duration: 4s;
+  animation-name: glissement;
+  animation-iteration-count: unset;
+  font-size: 25px;
+  margin-top: 8%;
+  color: darkblue;
+  background-color: white;
+  width: 100%; }
+
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+    width: 300%; }
+  to {
+    margin-left: 0%;
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

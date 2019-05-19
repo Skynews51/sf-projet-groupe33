@@ -78,3 +78,8 @@ fos_user:
     from_email:
         address: "adrien1133@hotmail.fr"
         sender_name: "adrien1133@hotmail.fr"
+
+easy_admin:
+    entities:
+        User:
+            class: AppBundle\Entity\User
